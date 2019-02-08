@@ -1,0 +1,25 @@
+﻿<link href="~/Styles/Custom/Account/Login.css" rel="stylesheet" />
+
+<div id="innerWrapper">
+
+    <div id="header">
+
+        <div class="title">
+            <h2>Αποσυνδεση</h2>
+            <h3 class="warning">Επιβεβαιωστε οτι θελετε να αποσυνδεθειτε</h3>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+
+        <form asp-action="Logout">
+            <div class="footer">
+                <input type="submit" value="Ναι" />
+                <input type="submit" asp-controller="Home" asp-action="Index" value="Οχι">
+            </div>
+        </form>
+
+    </div>
+
+</div>

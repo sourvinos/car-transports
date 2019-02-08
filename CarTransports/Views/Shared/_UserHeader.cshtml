@@ -1,0 +1,17 @@
+﻿<link href="~/Styles/Custom/Account/UserHeader.css" rel="stylesheet" />
+
+@using Microsoft.AspNetCore.Identity
+@using CarTransports.Identity
+
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var userName = UserManager.FindByNameAsync(UserManager.GetUserName(User));
+
+    <div id="userHeader">
+        <span>Εχετε συνδεθει ως</span>
+        <a asp-controller="Account" asp-action="Logout" method="post">@userName.Result.Name</a>
+    </div>
+}

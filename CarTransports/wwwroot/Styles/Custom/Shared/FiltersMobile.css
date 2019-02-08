@@ -1,0 +1,16 @@
+﻿#filtersMobile {
+    background-color: floralwhite;
+    padding: 20px 20px 20px 20px
+}
+
+#filterMobileToggle img {
+    height: 16px;
+}
+
+.filterHeader {
+    margin: 10px 0 10px 0;
+}
+
+.ui-dialog-titlebar, .ui-button {
+    display: none;
+}

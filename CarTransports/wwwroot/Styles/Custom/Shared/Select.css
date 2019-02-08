@@ -1,0 +1,20 @@
+﻿.select2-container {
+    font-family: myUbuntu;
+    height: 32px !important;
+    text-align: left;
+    width: 300px;
+}
+
+.select2-results__options {
+    display: block;
+}
+
+.select2-selection--single {
+    height: 32px !important;
+    border-radius: 0 !important;
+    border: 1px dotted black !important;
+}
+
+.select2-selection__rendered, .select2-search__field {
+    height: 32px !important;
+}

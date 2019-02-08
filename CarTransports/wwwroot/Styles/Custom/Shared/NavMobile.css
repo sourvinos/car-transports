@@ -1,0 +1,86 @@
+﻿a {
+    color: #979797;
+}
+
+#navMobile {
+    align-items: center;
+    background-color: #2f3544;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 0 0 0;
+    width: 200px;
+}
+
+    #navMobile .logo img {
+        margin: 10px auto;
+        width: 100px;
+    }
+
+    #navMobile ul#menuMobile {
+        display: block;
+        font-size: 20px;
+        font-variant: small-caps;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+        #navMobile ul#menuMobile > li {
+            cursor: pointer;
+            display: block;
+            padding: 10px;
+        }
+
+            #navMobile ul#menuMobile > li > a {
+                color: #d8d8d8;
+                font-size: 18px;
+            }
+
+    #navMobile .main-menu > li > a:hover {
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    #navMobile .main-menu > li:hover > a.top-level {
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+    }
+
+    #navMobile ul.first-level {
+        margin: 0 0 0 0;
+    }
+
+    #navMobile ul.second-level {
+        display: none;
+    }
+
+    #navMobile ul.first-level, #navMobile ul.second-level {
+        display: none;
+        padding-left: 0;
+    }
+
+        #navMobile ul.first-level > li, #navMobile ul.second-level > li {
+            padding: 10px 25px 10px 25px;
+            text-align: center;
+        }
+
+            #navMobile ul.first-level > li > a, #navMobile ul.second-level > li > a {
+                color: #979797;
+                font-size: 16px;
+                transition: 200ms;
+            }
+
+            #navMobile ul.first-level > li:hover > a, #navMobile ul.second-level > li:hover > a {
+                color: #ffffff;
+            }
+
+            #navMobile ul.first-level > li > a:hover, #navMobile ul.second-level > li > a:hover {
+                color: #ffffff;
+            }
+
+    #navMobile li:hover > .first-level, #navMobile li:hover > .second-level {
+        display: block;
+        opacity: 1;
+    }

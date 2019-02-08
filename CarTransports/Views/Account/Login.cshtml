@@ -1,0 +1,32 @@
+﻿<link href="~/Styles/Custom/Account/Login.css" rel="stylesheet" />
+
+<div id="innerWrapper">
+
+    <div id="header">
+
+        <div class="title">
+            <h2>Συνδεση</h2>
+            <h3>Δωστε τα στοιχεια σας</h3>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+
+        <form asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">
+
+            <div class="errorMessage">
+                <div asp-validation-summary="ModelOnly"></div>
+            </div>
+
+            @Html.Partial("_Fields")
+
+            <div class="buttonsLoginFooter">
+                <input type="submit" value="Συνδεση">
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

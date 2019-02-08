@@ -1,0 +1,78 @@
+﻿@model CarTransports.ViewModels.PickupPointViewModel
+
+<link href="~/Styles/Custom/PickuPoint/PickupPointFields.css" rel="stylesheet" />
+<link href="~/Styles/Custom/Shared/Select.css" rel="stylesheet" />
+
+<div class="inputPair hidden">
+    <label asp-for="PickupPointId"></label>
+    <input asp-for="PickupPointId" readonly />
+</div>
+
+<div class="inputPair">
+    <label asp-for="Countries"></label>
+    <select asp-for="CountryId" asp-items="@Model.Countries" class="dropdown">
+        <option value="">-- Επιλεξτε χωρα --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Description"></label>
+    <div class="">
+        <input asp-for="Description" required />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Zip"></label>
+    <div class="">
+        <input asp-for="Zip" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="City"></label>
+    <div class="">
+        <input asp-for="City" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Address"></label>
+    <div class="">
+        <input asp-for="Address" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="WorkingHours"></label>
+    <div class="">
+        <input asp-for="WorkingHours" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Lat"></label>
+    <div class="">
+        <input asp-for="Lat" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Lng"></label>
+    <div class="">
+        <input asp-for="Lng" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label></label>
+    <div id="showMap">
+        <button class="link" id="showMapButton">Εμφανιση στο χαρτη</button>
+    </div>
+</div>
+
+<div id="myMap"></div>
+
+<script src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&branch=experimental&key=AohWyrOiK2Jkb8dOkZiSeth6q3IqTKToOkwHGLVnOpNDjnHZjSwkLm1WYYCTWjs3" async defer></script>
+<script src="~/Scripts/Custom/PickupPoint/Map.js"></script>
+<script src="~/Scripts/Custom/PickupPoint/PickupPoint.js"></script>

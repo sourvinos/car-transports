@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/Styles/Custom/Shared/Global.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="~/Images/CarTransports.ico" type="image/x-icon" />
+
+    <title>Trani Trans</title>
+
+</head>
+
+<body>
+
+    <div id="outerWrapper" class="">
+
+        <div id="main">
+
+            <div id="mainImage">
+                <img src="" />
+            </div>
+
+            @Html.Partial("_UserHeader")
+            @Html.Partial("_NavDesktop")
+
+            @RenderBody()
+
+            @Html.Partial("_Footer")
+
+        </div>
+
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+
+    <script src="~/Scripts/Custom/Shared/Global.js" async></script>
+
+</body>
+
+</html>

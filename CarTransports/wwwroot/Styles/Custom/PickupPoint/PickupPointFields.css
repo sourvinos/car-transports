@@ -1,0 +1,29 @@
+﻿.modal {
+    width: 442px;
+}
+
+#coords {
+    align-items: center;
+    display: flex;
+}
+
+    #coords #showMap {
+        text-align: left;
+        width: 200px;
+    }
+
+        #coords #showMap #showMapButton {
+            background: url("/Images/Map.png") no-repeat center;
+            margin: 0;
+        }
+
+.ui-dialog-title {
+    color: darkblue;
+    font-family: myTahoma;
+    font-size: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+}

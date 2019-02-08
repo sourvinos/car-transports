@@ -1,0 +1,13 @@
+﻿@font-face {
+    font-family: myUbuntu;
+    src: url("/Fonts/Ubuntu-Condensed.ttf");
+}
+
+@font-face {
+    font-family: myTahoma;
+    src: url("/Fonts/Tahoma.ttf");
+}
+
+span {
+    font-family: Ubuntu;
+}

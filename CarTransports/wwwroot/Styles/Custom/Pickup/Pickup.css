@@ -1,0 +1,94 @@
+﻿/* Common */
+.rowDetails {
+    text-align: left;
+}
+
+    .rowDetails > td {
+        padding: 0 !important;
+    }
+
+.itemDetails {
+    padding: 10px !important;
+}
+
+/* Specific */
+#innerWrapper {
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#resultsAndButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.VIN {
+    font-family: monospace;
+}
+
+.pickupStates, .debitStates {
+    width: 100%;
+}
+
+.pickupPerStateCount, .debitPerStateCount {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.debitAmount {
+    color: #0094ff;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media(max-width:768px) {
+    #logoDesktop {
+        margin-left: auto !important;
+    }
+
+    #filterMobileToggle {
+        display: block;
+    }
+
+    #filtersDesktop {
+        display: none;
+    }
+
+    #pageFooter {
+        opacity: 0;
+    }
+
+    .pickupDescriptionRow {
+        display: normal;
+    }
+}
+
+/* Desktop */
+@media(min-width:769px) {
+    #logoDesktop {
+        margin-left: 0;
+    }
+
+    #filterMobileToggle {
+        display: none;
+    }
+
+    #filtersDesktop {
+        display: flex;
+    }
+
+    #filtersMobile {
+        display: none;
+    }
+
+    .customerDescription, .pickupPointDescription, .currentPosition {
+        display: normal;
+    }
+
+    #filterMobileToggle {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CarTransports.ViewModels.UserIndexViewModel>
+
+<div class="table-content">
+    <table class="sortable">
+        <thead>
+            <tr>
+                <th data-sort="name">Πληρες ονομα</th>
+                <th data-sort="name">Email</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="row clickable" id="@item.Id">
+                    <td class="column-content left">@item.Name</td>
+                    <td class="column-content left">@item.Email</td>
+                    <td class="action edit-icon"></td>
+                    <td class="column-content bin-icon"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

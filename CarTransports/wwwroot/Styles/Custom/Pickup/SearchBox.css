@@ -1,0 +1,8 @@
+﻿#searchBox {
+    width: 70%;
+}
+
+    #searchBox #searchInput {
+        font-style: italic;
+        width: 100%;
+    }

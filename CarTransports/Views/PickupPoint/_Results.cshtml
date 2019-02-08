@@ -1,0 +1,46 @@
+﻿@model CarTransports.ViewModels.PickupPointIndexViewModel
+
+<div class="table-content">
+    <table id="sortable">
+        <thead>
+            <tr>
+                <th></th>
+                <th data-sort="name" class="filter">Χωρα</th>
+                <th data-sort="name">ΤΚ</th>
+                <th data-sort="name">Πολη</th>
+                <th data-sort="name">Περιγραφη</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.PickupPointResults)
+            {
+                // Data
+                <tr class="row clickable" id="@item.PickupPointId">
+                    <td class="fold-icon"></td>
+                    <td class="column-content left">@item.Country.Description</td>
+                    <td class="column-content left">@item.Zip</td>
+                    <td class="column-content left">@item.City</td>
+                    <td class="column-content left">@item.Description</td>
+                    <td class="action edit-icon"></td>
+                    <td class="column-content bin-icon"></td>
+                </tr>
+                // Hidden details
+                <tr class="row rowDetails @item.PickupPointId" id="@item.PickupPointId">
+                    <td></td>
+                    <td colspan="3">
+                        <div class="itemDetails">
+                            <span>Χωρα: </span>@item.Country.Description<br />
+                            <span>Περιγραφη: </span>@item.Description<br />
+                            <span>ΤΚ: </span>@item.Zip<br />
+                            <span>Πολη: </span>@item.City<br />
+                            <span>Διευθυνση: </span>@item.Address<br />
+                            <span>Ωραριο: </span>@item.WorkingHours<br />
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

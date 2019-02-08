@@ -1,0 +1,48 @@
+﻿<link href="~/Styles/Custom/Shared/Tables.css" rel="stylesheet" />
+<link href="~/Styles/Custom/PickuPoint/PickupPoint.css" rel="stylesheet" />
+
+<div id="innerWrapper">
+
+    <div id="filtersDesktop">
+        @Html.Partial("_FiltersDesktop")
+        <div class="filterFooter">
+            <button class="link search">Αναζητηση</button>
+        </div>
+        @Html.Partial("_ZipSearchBox")
+    </div>
+
+    <div id="filtersMobile">
+        @Html.Partial("_FiltersMobile")
+        <div class="filterFooter">
+            <button class="link search">Αναζητηση</button>
+        </div>
+    </div>
+
+    <div id="resultsAndButtons">
+
+        <div id="header">
+            <div class="title">
+                <h2>@ViewBag.Header</h2>
+                <h4>@ViewBag.SubHeader </h4>
+            </div>
+            <div class="buttons">
+                <a class="button add-icon"></a>
+            </div>
+        </div>
+
+        <div id="results">
+            @Html.Partial("_Results")
+        </div>
+
+        <div class="buttonsFooter">
+            <a class="link" id="back-icon" asp-controller="Home" asp-action="Index">Αρχικη </a>
+            <a class="link" id="add-icon" asp-action="Create">Δημιουργια</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="~/Scripts/Custom/Shared/Tables.js" async></script>
+<script src="~/Scripts/Custom/PickupPoint/PickupPoint.js" async></script>
+<script src="~/Scripts/Custom/Shared/SortTable.js" async></script>

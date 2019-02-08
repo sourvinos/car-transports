@@ -1,0 +1,100 @@
+﻿@model CarTransports.ViewModels.PickupViewModel
+
+<div class="inputPair hidden">
+    <label asp-for="PickupId"></label>
+    <input asp-for="PickupId" readonly />
+</div>
+
+<div class="inputPair">
+    <label asp-for="Customers"></label>
+    <select asp-for="CustomerId" asp-items="@Model.Customers" class="dropdown">
+        <option value="">-- Επιλεξτε πελατη --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="PickupPoints"></label>
+    <select asp-for="PickupPointId" asp-items="@Model.PickupPoints" class="dropdown">
+        <option value="">-- Επιλεξτε σημειο παραλαβης --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="PickupStates"></label>
+    <select asp-for="PickupStateId" asp-items="@Model.PickupStates" class="dropdown">
+        <option value="">-- Επιλεξτε σταδιο παραλαβης --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="DestinationPorts"></label>
+    <select asp-for="DestinationPortId" asp-items="@Model.DestinationPorts" class="dropdown">
+        <option value="">-- Επιλεξτε λιμανι προορισμου --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="DebitStates"></label>
+    <select asp-for="DebitStateId" asp-items="@Model.DebitStates" class="dropdown">
+        <option value="">-- Επιλεξτε σταδιο τιμολογησης --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Suppliers"></label>
+    <select asp-for="SupplierId" asp-items="@Model.Suppliers" class="dropdown">
+        <option value="">-- Επιλεξτε εμπορο --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="CurrentPositions"></label>
+    <select asp-for="CurrentPositionId" asp-items="@Model.CurrentPositions" class="dropdown">
+        <option value="">-- Επιλεξτε τρεχουσα θεση --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Manufacturer"></label>
+    <div class="ui input">
+        <input asp-for="Manufacturer" required />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Model"></label>
+    <div class="ui input">
+        <input asp-for="Model" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="CarNo"></label>
+    <div class="ui input">
+        <input asp-for="CarNo" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="VIN"></label>
+    <div class="ui input">
+        <input asp-for="VIN" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="PickupNo"></label>
+    <div class="ui input">
+        <input asp-for="PickupNo" />
+    </div>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Price"></label>
+    <div class="ui input">
+        <input asp-for="Price" class="right" />
+    </div>
+</div>
+
+<script src="~/Scripts/Custom/Shared/Filters.js"></script>
+<script src="~/Scripts/Custom/Pickup/Pickup.js"></script>

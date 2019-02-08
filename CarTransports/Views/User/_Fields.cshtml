@@ -1,0 +1,33 @@
+﻿@model CarTransports.ViewModels.UserViewModel
+
+<div class="inputPair">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" required />
+</div>
+
+<div class="inputPair">
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName" required />
+</div>
+
+<div class="inputPair">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+</div>
+
+<div class="inputPair">
+    <label asp-for="AppRoleId"></label>
+    <select asp-for="AppRoleId" asp-items="@Model.AppRoles">
+        <option>-- Επιλεξτε --</option>
+    </select>
+</div>
+
+<div class="inputPair">
+    <label asp-for="Password"></label>
+    <input asp-for="Password" required />
+</div>
+
+<div class="inputPair">
+    <label asp-for="ConfirmPassword"></label>
+    <input asp-for="ConfirmPassword" required />
+</div>

@@ -1,0 +1,49 @@
+﻿<link href="~/Styles/Custom/Shared/NavMobile.css" rel="stylesheet" />
+
+<nav id="navMobile">
+    <ul class="logo">
+        <li>
+            <a href="#" id="logo"><img src="~/Images/CarTransportsWhite.svg" /></a>
+        </li>
+    </ul>
+    <ul id="menuMobile">
+        <li>
+            <a class="top-level" href="#">Πελατες</a>
+            <ul class="first-level">
+                <li><a asp-controller="Customer" asp-action="Create">Νεος</a></li>
+                <li><a asp-controller="Customer" asp-action="Index">Κατασταση</a></li>
+                <li><a href="#">Οφειλες</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="top-level" href="#">Παραλαβες</a>
+            <ul class="first-level">
+                <li><a asp-controller="Pickup" asp-action="Create">Νεα</a></li>
+                <li><a asp-controller="Pickup" asp-action="Index">Κατασταση</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="top-level" href="#">Πινακες</a>
+            <ul class="first-level">
+                <li><a asp-controller="Supplier" asp-action="Index">Εμποροι</a></li>
+                <li><a asp-controller="Port" asp-action="Index">Λιμανια</a></li>
+                <li><a asp-controller="PickupPoint" asp-action="Index">Σημεια παραλαβης</a></li>
+                <li><a asp-controller="Collaborator" asp-action="Index">Συνεργατες</a></li>
+                <li><a asp-controller="PickupState" asp-action="Index">Σταδια παραλαβης</a></li>
+                <li><a asp-controller="DebitState" asp-action="Index">Σταδια τιμολογησης</a></li>
+                <li><a asp-controller="CurrentPosition" asp-action="Index">Τρεχουσες θεσεις</a></li>
+                <li><a asp-controller="Country" asp-action="Index">Χωρες</a></li>
+                <li><a asp-controller="User" asp-action="Index">Χρηστες</a></li>
+                <li><a asp-controller="Role" asp-action="Index">Ρολοι χρηστων</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="top-level" href="#">Λογαριασμος</a>
+            <ul class="first-level">
+                <li><a asp-controller="Account" asp-action="Logout">Αποσυνδεση</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<script src="~/Scripts/Custom/Shared/MenuMobile.js" async></script>

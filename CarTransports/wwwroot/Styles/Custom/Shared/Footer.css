@@ -1,0 +1,24 @@
+﻿#pageFooter {
+    flex-direction: column;
+    font-size: 15px;
+    font-variant-caps: petite-caps;
+    margin: 20px 0 10px 0;
+    max-width: 1280px;
+    text-align: center;
+    width: 95%;
+}
+
+    #pageFooter p {
+        color: #000000;
+    }
+
+#heart {
+    color: indianred;
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    #pageFooter {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,78 @@
+﻿/* Common */
+.rowDetails {
+    text-align: left;
+}
+
+    .rowDetails > td {
+        padding: 0 !important;
+    }
+
+.itemDetails {
+    padding: 10px !important;
+}
+
+/* Specific */
+#innerWrapper {
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#resultsAndButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.countryCount {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.countries {
+    width: 100%;
+}
+
+
+/* Mobile */
+@media(max-width:768px) {
+    #logoDesktop {
+        margin-left: auto !important;
+    }
+
+    #filterMobileToggle {
+        display: block;
+    }
+
+    #filtersDesktop {
+        display: none;
+    }
+
+    #pageFooter {
+        opacity: 0;
+    }
+}
+
+/* Desktop */
+@media(min-width:769px) {
+    #logoDesktop {
+        margin-left: 0;
+    }
+
+    #filterMobileToggle {
+        display: none;
+    }
+
+    #filtersDesktop {
+        display: flex;
+    }
+
+    #filtersMobile {
+        display: none;
+    }
+
+    #filterMobileToggle {
+        display: none;
+    }
+}

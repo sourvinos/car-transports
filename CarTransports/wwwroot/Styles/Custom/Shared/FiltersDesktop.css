@@ -1,0 +1,59 @@
+﻿#filtersDesktop {
+    align-items: center;
+    flex: 0 0 auto;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+}
+
+.filterHeader, .filterFooter {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.listitems {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+    .listItems ul {
+        width: auto;
+    }
+
+    .listItems li {
+        border-left: 5px solid;
+        border-left-color: darkslategray;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        height: 100%;
+        margin: .2em 0;
+        padding: 0.2em 0.7em 0.2em 0.5em;
+        text-align: left;
+        width: 100%;
+    }
+
+        .listItems li img {
+            height: 22px;
+        }
+
+        .listItems li:hover {
+            background-color: aliceblue;
+        }
+
+        .listItems li.selected {
+            border-left-color: red;
+        }
+
+.clearFilter {
+    height: 21px;
+    margin: 0.5em;
+    text-align: center;
+}
+
+    .clearFilter:hover {
+        background-color: dimgray;
+        background-color: rgba(128, 128, 128,0.4);
+        cursor: pointer;
+    }

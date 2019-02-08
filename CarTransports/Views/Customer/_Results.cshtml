@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CarTransports.ViewModels.CustomerGroupViewModel>
+
+<link href="~/Styles/Custom/Customer/Customer.css" rel="stylesheet" />
+
+@{ int x; }
+
+<div class="table-content">
+    <table class="sortable">
+        <thead>
+            <tr>
+                <th></th>
+                <th data-sort="name">Επωνυμια</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                x = 0;
+                // Data
+                <tr class="row clickable" id="@item.CustomerId">
+                    <td class="fold-icon"></td>
+                    <td class="column-content left">@item.CustomerDescription ( <span class="pickupPerCustomerCount">@item.PickupPerCustomerCount </span> ) ( <span class="sumPerCustomer">@string.Format("{0:#,##0.00}", item.SumPerCustomer) </span>)</td>
+                    <td class="action edit-icon"></td>
+                    <td class="action bin-icon"></td>
+                </tr>
+                // Hidden details
+                @foreach (var pickup in item.PickupResults)
+                {
+                    ++x;
+                    <tr class="row rowDetails @item.CustomerId">
+                        <td></td>
+                        <td colspan="3">
+                            <a asp-controller="pickup" asp-action="edit" asp-route-id=@pickup.PickupId class="">
+                                <div class="itemDetails">
+                                    <div>
+                                        @x
+                                    </div>
+                                    <div>
+                                        @pickup.Manufacturer @pickup.Model<br />
+                                        @pickup.VIN<br /><br />
+
+                                        @pickup.PickupPoint.Country.Description<br />
+                                        @pickup.PickupPoint.Description<br />
+                                        @pickup.PickupPoint.City<br /><br />
+
+                                        Σταδιο παραλαβης: @pickup.PickupState.Description<br />
+                                        Σταδιο τιμολογησης: @pickup.DebitState.Description<br /><br />
+
+                                        Χρεωση: @string.Format("{0:#,##0.00}", pickup.Price)<br />
+                                    </div>
+                                </div>
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<script src="~/Scripts/Custom/Shared/Tables.js" async></script>
+<script src="~/Scripts/Custom/Customer/Customer.js"></script>
+<script src="~/Scripts/Custom/Shared/SortTable.js" async></script>

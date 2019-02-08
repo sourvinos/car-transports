@@ -1,0 +1,15 @@
+﻿@model CarTransports.ViewModels.InvoicesForCustomerViewModel
+@*<link href="~/Styles/Custom/Pickup/Pickup.css" rel="stylesheet" />*@
+
+<span>Invoices for <b>@Model.Customer.EnglishCompanyName</b></span>
+
+<ul id="">
+    <li>
+        <ul>
+            @foreach (var invoice in @Model.Pickups)
+            {
+                <li>@invoice.Manufacturer @invoice.Model @string.Format("{0:#,##0.00}", invoice.Price)</li>
+            }
+        </ul>
+    </li>
+</ul>

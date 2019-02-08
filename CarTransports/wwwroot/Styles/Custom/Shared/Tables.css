@@ -1,0 +1,42 @@
+﻿h2 {
+    font-family: myTahoma;
+}
+
+table {
+    border-collapse: collapse;
+    color: #000000;
+    font-size: 13px;
+    width: 100%;
+}
+
+th {
+    border: 1px dotted lightgray;
+    font-size: 16px;
+    font-variant-caps: petite-caps;
+    padding: 10px;
+}
+
+    th:hover {
+        color: #979797;
+        cursor: pointer;
+    }
+
+td {
+    padding: 10px;
+}
+
+.row.clickable:hover {
+    color: cadetblue;
+    font-weight: bold;
+}
+
+#mainImage {
+    opacity: 0.1;
+}
+
+/* Mobile */
+@media (max-width:768px) {
+    #pageFooter {
+        opacity: 0;
+    }
+}

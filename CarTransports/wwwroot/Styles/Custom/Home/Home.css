@@ -1,0 +1,36 @@
+﻿#wrapper {
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+}
+
+#logoDesktop {
+    margin-left: 0 !important;
+}
+
+
+/* Mobile */
+@media(max-width:768px) {
+    #navDesktop {
+        justify-content: space-between;
+    }
+
+    #mainImage {
+        opacity: 0.2;
+    }
+
+    #pageFooter {
+        display: flex;
+    }
+}
+
+/* Desktop */
+@media(min-width:769px) {
+    #navDesktop {
+        justify-content: flex-start;
+    }
+
+    #mainImage {
+        opacity: 0.6;
+    }
+}

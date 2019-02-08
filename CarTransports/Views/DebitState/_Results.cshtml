@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CarTransports.Models.DebitState>
+
+<div class="table-content">
+    <table class="sortable">
+        <thead>
+            <tr>
+                <th data-sort="name">Περιγραφη</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="row clickable" id="@item.DebitStateId">
+                    <td class="column-content left">@item.Description</td>
+                    <td class="action edit-icon"></td>
+                    <td class="column-content bin-icon"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

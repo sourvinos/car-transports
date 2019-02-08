@@ -1,0 +1,94 @@
+﻿@model CarTransports.ViewModels.PickupIndexViewModel
+
+<div class="table-content">
+    <table id="sortable">
+        <thead>
+            <tr>
+                <th class=""></th>
+                <th class=""></th>
+                <th data-sort="name" class="customerId hidden">ID Πελατη</th>
+                <th data-sort="name" class="customerDescription">Πελατης</th>
+                <th data-sort="name">Χωρα</th>
+                <th data-sort="name">Σημειο παραλαβης</th>
+                <th data-sort="name">Κατασκευαστης</th>
+                <th data-sort="name">Μοντελο</th>
+                <th data-sort="name">Κωδ. αυτοκινητου</th>
+                <th data-sort="name">Αρ. πλαισιου</th>
+                <th data-sort="name" class="filter">Σταδιο παραλαβης</th>
+                <th data-sort="name" class="filter">Σταδιο τιμολογησης</th>
+                <th data-sort="name" class="currentPosition">Τρεχουσα θεση</th>
+                <th data-sort="name" class="amount">Χρεωση</th>
+                <th class=""></th>
+                <th class=""></th>
+                <th class=""></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pickup in Model.PickupResults)
+            {
+                // Data
+                <tr class="row clickable" id="@pickup.PickupId" title="ID: @pickup.PickupId">
+                    <td class="fold-icon"></td>
+                    <td class="action check-icon">
+                        <label class="container">
+                            <input type="checkbox" data-customerId="@pickup.CustomerId" data-pickupId="@pickup.PickupId">
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td class="column-content left customerId hidden">@pickup.Customer.CustomerId</td>
+                    <td class="column-content left customerDescription">@pickup.Customer.GreekCompanyName</td>
+                    <td class="column-content left countryDescription">@pickup.PickupPoint.Country.Description</td>
+                    <td class="column-content left">@pickup.PickupPoint.Zip @pickup.PickupPoint.City</td>
+                    <td class="column-content left">@pickup.Manufacturer</td>
+                    <td class="column-content left">@pickup.Model</td>
+                    <td class="column-content center">@pickup.CarNo</td>
+                    <td class="column-content center VIN">@pickup.VIN.Substring(0, 12)-@pickup.VIN.Substring(12)</td>
+                    <td class="column-content left pickupStateDescription">@pickup.PickupState.Description</td>
+                    <td class="column-content left debitStateDescription">@pickup.DebitState.Description</td>
+                    <td class="column-content left currentPosition">@pickup.CurrentPosition.Description</td>
+                    <td class="column-content right amount">@string.Format("{0:#,##0.00}", pickup.Price)</td>
+                    <td class="action edit-icon"></td>
+                    <td class="action bin-icon"></td>
+                    <td class="action invoice-icon @pickup.PickupId hidden"></td>
+                </tr>
+                // Hidden details
+                <tr class="row rowDetails @pickup.PickupId" id="@pickup.PickupId">
+                    <td></td>
+                    <td></td>
+                    <td colspan="4">
+                        <div class="itemDetails">
+                            Πελατης: @pickup.Customer.GreekCompanyName<br />
+                            Τηλεφωνα: @pickup.Customer.Phone @pickup.Customer.PhoneSecondary<br />
+                            Διευθυνση: @pickup.Customer.Address<br />
+                            ΤΚ, Πολη: @pickup.Customer.Zip @pickup.Customer.City<br /><br />
+
+                            Χωρα: @pickup.PickupPoint.Country.Description<br />
+                            Σημειο παραλαβης: @pickup.PickupPoint.Description<br />
+                            Διευθυνση: @pickup.PickupPoint.Address<br />
+                            ΤΚ, Πολη: @pickup.PickupPoint.Zip, @pickup.PickupPoint.City<br />
+                            Ωραριο: @pickup.PickupPoint.WorkingHours<br /><br />
+
+                            Κωδ. αυτοκινητου: @pickup.CarNo<br />
+                            Αρ. πλαισιου: @pickup.VIN<br />
+                            Κωδ. παραλαβης: @pickup.PickupNo<br /><br />
+                            Λιμανι προορισμου: @pickup.DestinationPort.Description<br />
+                            Κατασταση παραλαβης: @pickup.PickupState.Description<br />
+                            Σταδιο τιμολογησης: @pickup.DebitState.Description<br /><br />
+
+                            Χρεωση: @string.Format("{0:#,##0.00}", pickup.Price)<br />
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="hidden">
+    <input type="text" name="customerIds" id="customerIds" />
+    <input type="text" name="pickupIds" id="pickupIds" />
+    <input type="submit" id="createInvoice" class="link" value="Προτιμολογιο" />
+</div>
+
+<div id="invoices"></div>
+

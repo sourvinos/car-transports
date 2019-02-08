@@ -1,0 +1,36 @@
+﻿<link href="~/Styles/Custom/Shared/Tables.css" rel="stylesheet" />
+
+<div id="innerWrapper">
+
+    <div id="header">
+
+        <div class="title">
+            <h2>@ViewBag.Header</h2>
+            <h4 class=@{ string className = ViewBag.Action == "Delete" ? "warning" : "";  @className }>@ViewBag.SubHeader</h4>
+        </div>
+
+        <div class="buttons">
+            <a class="button back-icon"></a>
+            <a class="button ok-icon"></a>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+
+        <form asp-action=@ViewBag.Action asp-route-returnurl="@ViewData[" ReturnUrl"]">
+
+            @Html.Partial("_Fields")
+
+            <div class="buttonsFooter">
+                <input type="submit" id="ok-icon" value="OK" />
+                <input type="submit" id="back-icon" value="Επιστροφη" asp-action="Index">
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="~/Scripts/Custom/Shared/Tables.js" async></script>

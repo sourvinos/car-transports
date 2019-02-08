@@ -1,0 +1,35 @@
+﻿<link href="~/Styles/Custom/Shared/Tables.css" rel="stylesheet" />
+
+<div id="innerWrapper">
+
+    <div id="header">
+
+        <div class="buttons">
+            <button class="circular ui icon button teal">
+                <i class="plus icon"></i>
+            </button>
+        </div>
+
+        <div class="title">
+            <h2>@ViewBag.Header</h2>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+
+        <div id="results">
+            @Html.Partial("_Results")
+        </div>
+
+        <div class="buttonsFooter">
+            <a class="link" id="back-icon" asp-controller="Home" asp-action="Index">Αρχικη </a>
+            <a class="link" id="add-icon" asp-action="Create">Δημιουργια</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/Custom/Shared/Tables.js" async></script>
+<script src="~/Scripts/Custom/Shared/FixedHeaders.js" async></script>
+<script src="~/Scripts/Custom/Shared/SortTable.js" async></script>

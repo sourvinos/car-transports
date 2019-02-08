@@ -1,0 +1,14 @@
+﻿#desktop {
+    width: 95%;
+}
+
+#menuLogo {
+    width: 100px;
+}
+
+.ui.secondary.menu .item {
+    font-family: myUbuntu;
+    font-size: 20px;
+    font-variant-caps: all-small-caps;
+    padding-bottom: 20px;
+}

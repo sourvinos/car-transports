@@ -1,0 +1,43 @@
+﻿<link href="~/Styles/Custom/Shared/NavDesktop.css" rel="stylesheet" />
+
+<nav id="desktop">
+    <div class="ui secondary menu">
+        <div class="item">
+            <img src="~/Images/Logo.svg" id="menuLogo">
+        </div>
+        <div class="ui dropdown item">
+            Πελατες
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" asp-controller="Customer" asp-action="Create">Νεος</a>
+                <a class="item" asp-controller="Customer" asp-action="Index">Κατασταση</a>
+            </div>
+        </div>
+        <div class="ui dropdown item">
+            Παραλαβες
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" asp-controller="Pickup" asp-action="Create">Νεα</a>
+                <a class="item" asp-controller="Pickup" asp-action="Index">Κατασταση</a>
+            </div>
+        </div>
+        <div class="ui dropdown item">
+            Πινακες
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" asp-controller="Supplier" asp-action="Index">Εμποροι</a>
+                <a class="item" asp-controller="Port" asp-action="Index">Λιμανια</a>
+                <a class="item" asp-controller="PickupPoint" asp-action="Index">Σημεια παραλαβης</a>
+                <a class="item" asp-controller="Collaborator" asp-action="Index">Συνεργατες</a>
+                <a class="item" asp-controller="PickupState" asp-action="Index">Σταδια παραλαβης</a>
+                <a class="item" asp-controller="DebitState" asp-action="Index">Σταδια τιμολογησης</a>
+                <a class="item" asp-controller="CurrentPosition" asp-action="Index">Τρεχουσες θεσεις οχηματων</a>
+                <a class="item" asp-controller="Country" asp-action="Index">Χωρες</a>
+                <a class="item" asp-controller="User" asp-action="Index">Χρηστες</a>
+                <a class="item" asp-controller="Role" asp-action="Index">Ρολοι χρηστων</a>
+            </div>
+        </div>
+
+    </div>
+
+</nav>

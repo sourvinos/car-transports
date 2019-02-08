@@ -1,0 +1,31 @@
+﻿/* Common */
+a {
+    color: #000000;
+}
+
+.rowDetails {
+    text-align: left;
+}
+
+    .rowDetails > td {
+        padding: 0 !important;
+    }
+
+.itemDetails {
+    padding: 10px !important;
+}
+
+    .itemDetails:hover {
+        background-color: beige;
+    }
+
+/* Specific */
+.pickupPerCustomerCount {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.sumPerCustomer {
+    color: #0094ff;
+    font-weight: bold;
+}
